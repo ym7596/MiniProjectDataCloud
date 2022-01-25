@@ -22,7 +22,7 @@ class testApp(QtWidgets.QDialog):
     
     def imageadd(self):
         self.pixmapvar = QPixmap()
-        self.pixmapvar.load('D:\\pythonfile\\imgs\\img.png')
+        self.pixmapvar.load('.\imgs\\img.png')
         self.pixmapvar = self.pixmapvar.scaledToWidth(600)
         self.lbPic.setPixmap(self.pixmapvar)
         #self.showList()
@@ -44,22 +44,23 @@ class testApp(QtWidgets.QDialog):
         self.pushButton.setEnabled(True)
 def main():
     
-    jongmok_name = ''
+    jongmok_name = '삼성전자'
     IsStart = True
     
     #머신러닝 모듈 임포트
     tmpp = LCrol(jongmok_name) #해당 종목의 날짜와 종가 numpy array 리스트 
     #Macine.MachineLr('D:\pythonfile\imgs')
+    time.sleep(2)
     mc = Linear
-    mc.MachineLr('D:\pythonfile\imgs',tmpp[0],tmpp[1])
+    mc.MachineLr('./imgs',tmpp[0],tmpp[1])
     time.sleep(3)
     
    
     mm.showList('끝')
 
-async def LCrol(txt:str):
+def LCrol(txt:str):
     lc = lastC
-    tmp = await lc.LastCrolling(txt)
+    tmp =  lc.LastCrolling(txt)
     return tmp
 
 
