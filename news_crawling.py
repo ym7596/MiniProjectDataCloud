@@ -1,9 +1,9 @@
 
 import urllib.request
 import config   
-import pandas as pd
+
 from bs4 import BeautifulSoup
-import os
+
 
 def makeURL(sNode, search_text ):
     base = "https://openapi.naver.com/v1/search"
@@ -63,6 +63,13 @@ def searchResult(list):
     return title, link
 
 # 사용 예시
+
+def main(name:str):
+    print('크롤링메인뉴스')
+    list = searchText(name)
+    title, link = searchResult(list)
+    return title, link
+
 # def main():
 #     list = searchText('삼성전자')
 #     title, link = searchResult(list)

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1160</width>
     <height>720</height>
    </rect>
   </property>
@@ -61,12 +61,15 @@ border-color:rgb(0, 255, 0)</string>
 color:rgb(0, 255, 0);
 font: bold 18pt</string>
    </property>
+   <property name="autoScrollMargin">
+    <number>5</number>
+   </property>
   </widget>
   <widget class="QLabel" name="lbPic">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>270</y>
+     <y>290</y>
      <width>600</width>
      <height>400</height>
     </rect>
@@ -94,6 +97,138 @@ font: bold 18pt</string>
    </property>
    <property name="text">
     <string>일별 주가 분석 프로그램</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>60</y>
+     <width>491</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>뉴스</string>
+   </property>
+   <widget class="QTextBrowser" name="brw">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>21</y>
+      <width>481</width>
+      <height>171</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>이메일 대상자</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>이메일 추가</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>10</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Adobe 고딕 Std B</family>
+     <pointsize>28</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>우수종목 : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="BestNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>10</y>
+     <width>301</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Adobe 고딕 Std B</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>NONE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>305</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>추가</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>305</y>
+     <width>381</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="emailB">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>375</y>
+     <width>381</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Adobe 고딕 Std B</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
   </widget>
  </widget>

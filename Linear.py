@@ -11,7 +11,7 @@ import platform
 imgpath = './imgs'
 
 def MachineLr(path,day,price):
-    path = imgpath #테스트용
+    #path = imgpath #테스트용
     # day = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
     #             ,31,32,33,34,35,36,37,38,39,40])
     # price = np.array([72300,71300,74400,75800,75600,76300,77400,77400,78200,76900,76800,77000,77600,77800,78000
@@ -57,7 +57,7 @@ def MachineLr(path,day,price):
         print('Check your OS System')
     
     
-    plt.figure(figsize=(6,4),dpi=100,edgecolor='green',linewidth=2)
+    plt.figure(figsize=(4,2.5),dpi=100,edgecolor='green',linewidth=2)
     plt.scatter(t_input,t_target,color='limegreen')
     plt.plot(point,coe[0]*point**2+coe[1]*point+inter)
 
@@ -67,7 +67,6 @@ def MachineLr(path,day,price):
     plt.ylabel('price')
     #plt.figure(figsize=(3, 2),dpi=200)
     plt.savefig(path + '\\' + 'img.png')
-    plt.show(block=False)
     plt.pause(3)
     plt.close()
 #MachineLr(imgpath)

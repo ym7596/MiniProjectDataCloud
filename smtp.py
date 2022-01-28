@@ -26,7 +26,7 @@ class gmail_sender:
         self.msg.set_content(msg_body)
     def file_set(self,file):
         with open(file,"rb") as f:
-            self.msg.add_attachment(f.read(),maintype ="csv",subtype="plain",filename='테스트첨부')
+            self.msg.add_attachment(f.read(),maintype ="xlsx",subtype="plain",filename='주식 분석 보고서.xlsx')
     def smtp_con_send(self):
         self.smtp.ehlo()
         self.smtp.starttls()
@@ -36,11 +36,16 @@ class gmail_sender:
     def smtp_discon(self):
         self.smtp.close()
 
-
-#path = 'D:\\Pock\\Names.csv'
-# test_e = gmail_sender('symbols25@gmail.com','ym7596@naver.com',pw)
-# test_e.msg_set("Test_Title2","안녕하세요 뚜르입니다.")
-# #test_e.file_set(path)
-# test_e.smtp_con_send()
-# test_e.smtp_discon()
-        
+def sending(tL:list):
+    rList = ''
+    for i in tL:
+        rList += i
+        rList += ';'
+    path = './주식 분석 보고서.xlsx'
+    for i in range(len(tL)):
+        test_e = gmail_sender('symbols25@gmail.com',tL.pop(0),pw)
+        test_e.msg_set("Test_Title2","안녕하세요 테스트입니다..")
+        test_e.file_set(path)
+        test_e.smtp_con_send()
+        test_e.smtp_discon()
+            
